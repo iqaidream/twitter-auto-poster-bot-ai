@@ -1,6 +1,6 @@
 // By VishwaGauravIn (https://itsvg.in)
 
-const GenAI = require("@google/generative-ai");
+const GenAI = require("@google/genai");
 const { TwitterApi } = require("twitter-api-v2");
 const SECRETS = require("./SECRETS");
 
@@ -14,7 +14,7 @@ const twitterClient = new TwitterApi({
 const generationConfig = {
   maxOutputTokens: 400,
 };
-const genAI = new GenAI.GoogleGenerativeAI(SECRETS.GEMINI_API_KEY);
+const genAI = new GoogleGenAI({apiKey: 'GEMINI_API_KEY'});
 
 async function run() {
   // For text-only input, use the gemini-pro model
