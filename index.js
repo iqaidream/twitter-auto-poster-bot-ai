@@ -29,7 +29,7 @@ async function run() {
   });
   const text = response.text;
   console.log('GEMINI RESULT: ' + text);
-  //sendTweet(text);
+  sendTweet(text);
 }
 
 run();
