@@ -22,7 +22,7 @@ async function run() {
     "generate a web development content, tips and tricks or something new or some rant or some advice as a tweet, it should not be vague and should be unique; under 280 characters and should be plain text, you can use emojis";
 
   // For text-only input
-  const response = await ai.models.generateContent({
+  const response = await genAI.models.generateContent({
     model: "gemini-2.5-flash",
     contents: prompt,
     maxOutputTokens: 400,
