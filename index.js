@@ -27,8 +27,6 @@ async function run() {
     contents: prompt,
     maxOutputTokens: 400,
   });
-
-  const response = await result.response;
   const text = response.text();
   console.log(text);
   sendTweet(text);
