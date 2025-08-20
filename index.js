@@ -37,7 +37,7 @@ run();
 async function sendTweet(tweetText) {
   try {
     // Home timeline is available in v1 API, so use .v1 prefix
-    const homeTimeline = await client.v1.homeTimeline();
+    const homeTimeline = await twitterClient.v1.homeTimeline();
 
     // Current page is in homeTimeline.tweets
     console.log(homeTimeline.tweets.length, 'fetched.');
