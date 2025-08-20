@@ -19,7 +19,7 @@ const genAI = new GoogleGenAI({apiKey: SECRETS.GEMINI_API_KEY});
 async function run() {
   // Write your prompt here
   const prompt =
-    "generate a web development content, tips and tricks or something new or some rant or some advice as a tweet, it should not be vague and should be unique; under 280 characters and should be plain text, you can use emojis";
+    "generate a twitt talking about insight quant ai, an ai to trade on crypto currencies. mention @insightquantai and add this link https://mobile.isq.ai/#/pages/login/register?invite=9839783";
 
   // For text-only input
   const response = await genAI.models.generateContent({
@@ -29,7 +29,7 @@ async function run() {
   });
   const text = response.text;
   console.log('GEMINI RESULT: ' + text);
-  sendTweet(text);
+  //sendTweet(text);
 }
 
 run();
