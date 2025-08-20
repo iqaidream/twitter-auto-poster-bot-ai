@@ -19,7 +19,7 @@ const genAI = new GoogleGenAI({apiKey: SECRETS.GEMINI_API_KEY});
 async function run() {
   // Write your prompt here
   const prompt =
-    "generate a twitt talking about insight quant ai, an ai to trade on crypto currencies. mention @insightquantai and add this link https://mobile.isq.ai/#/pages/login/register?invite=9839783";
+    "generate a twitt talking about insight quant ai, an ai to trade on crypto currencies. mention @insightquantai and add this link https://tinyurl.com/iqaidream and i want only one result";
 
   // For text-only input
   const response = await genAI.models.generateContent({
