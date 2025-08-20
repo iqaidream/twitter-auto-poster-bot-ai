@@ -28,7 +28,7 @@ async function run() {
     maxOutputTokens: 400,
   });
   const text = response.text;
-  console.log(text);
+  console.log('GEMINI RESULT: ' + text);
   sendTweet(text);
 }
 
