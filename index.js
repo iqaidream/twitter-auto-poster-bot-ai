@@ -36,8 +36,16 @@ run();
 
 async function sendTweet(tweetText) {
   try {
-    await twitterClient.v2.tweet(tweetText);
-    console.log("Tweet sent successfully!");
+    // Home timeline is available in v1 API, so use .v1 prefix
+    const homeTimeline = await client.v1.homeTimeline();
+
+    // Current page is in homeTimeline.tweets
+    console.log(homeTimeline.tweets.length, 'fetched.');
+
+    const nextHomePage = await homeTimeline.next();
+    console.log('Fetched tweet IDs in next page:', nextHomePage.tweets.map(tweet => tweet.id_str));
+    //await twitterClient.v2.tweet(tweetText);
+    //console.log("Tweet sent successfully!");
   } catch (error) {
     console.error("Error sending tweet:", error);
   }
